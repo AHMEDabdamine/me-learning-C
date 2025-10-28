@@ -4,10 +4,10 @@
 #include "colors.h"
 
 
-int main() {
+int main() {    
 int age;
 char name[50] ;
-    printf("please enter your name: ");
+    printf("please enter your name here : ");
     scanf("%s", name);
     printf(" \n please enter your age: ");
     scanf("%d", &age);

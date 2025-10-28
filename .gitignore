@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+# output 
+output/
+.vscode
 
 # Object files
 *.o
