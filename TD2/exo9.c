@@ -3,28 +3,38 @@
 int main()
 {
     int month;
-    printf("please inter the desired mounth value : ");
+    printf("Please enter the desired month value (1–12): ");
     scanf("%d", &month);
-    if (month > 12)
 
+    switch (month)
     {
-        printf("the value you entered in not a valid month you stupid ");
-    }
-    else if (month == 12 || month == 1 || month == 2)
-    {
-        printf(" YAY ! its winter ");
-    }
-    else if (month == 3 || month == 4 || month == 5)
-    {
-        printf("YEAAAAAAhn, its spring");
-    }
-    else if (month == 6 || month == 7 || month == 8)
-    {
-        printf("booooo , its summer");
-    }
-    else
-    {
-        printf("its autumn ! ");
+    case 12:
+    case 1:
+    case 2:
+        printf("YAY! It's winter \n");
+        break;
+
+    case 3:
+    case 4:
+    case 5:
+        printf("YEAHHH, it's spring \n");
+        break;
+
+    case 6:
+    case 7:
+    case 8:
+        printf("Boooo, it's summer \n");
+        break;
+
+    case 9:
+    case 10:
+    case 11:
+        printf("It's autumn \n");
+        break;
+
+    default:
+        printf("The value you entered is not a valid month!\n");
+        break;
     }
 
     return 0;
