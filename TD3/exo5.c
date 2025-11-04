@@ -15,7 +15,7 @@ int main()
         sum = sum + price;
     }
 
-    printf("The total sum of the items is: %.2f DA ", sum);
+    printf("The total sum of the items is: %f DA ", sum);
 
     return 0;
 }

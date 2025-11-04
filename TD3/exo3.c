@@ -4,7 +4,7 @@ int main()
 {
     int num, pos, max;
 
-    for (int i = 1; i <= 20; i++)
+    for (int i = 1; i <= 10; i++)
     {
         printf("Enter number %d: ", i);
         scanf("%d", &num);
@@ -12,18 +12,18 @@ int main()
         if (i == 1)
         {
             max = num;
-            //       pos = 1;
+            pos = 1;
         }
         // بعدها قارن بين القيم المدخلة والماكس وفيحاة ما إذا كان النيميرو كبير على الماكس لي راه محفوظ يدي بلاصتو
         else if (num > max)
         {
             max = num;
-            //          pos = i;
+            pos = i;
         }
     }
 
     printf("\nThe largest number is %d\n", max);
-    //    printf("It was entered at position %d\n", pos);
+    printf("It was entered at position %d\n", pos);
 
     return 0;
 }
