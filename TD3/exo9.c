@@ -1,22 +1,33 @@
-    #include <stdio.h>
+#include <stdio.h>
 
-    int main()
+int main()
+{
+    const int correct_pin = 5454;
+    const int max_att = 3;
+    int pin;
+    int attempts = 0;
+
+    printf("please enter your pin (you have %d attempts):\n", max_att);
+
+    while (attempts < max_att)
     {
-        int pin = 5454, ;
-        printf("please set the code (notice : you have only 3 times ) :");
-        for (int i = 0; i < 3; i++)
-        {
-            scanf("%d", &pin);
-            if (pin == 5454)
-            {
-                printf("the code is correct access granted ");
-            }
-            else
-            {
-                printf("try again : ");
-                scanf("%d", &pin);
-            }
-        }
+        printf("Attempt %d: ", attempts + 1);
+        scanf("%d", &pin);
 
-        return 0;
+        if (pin == correct_pin)
+        {
+            printf("The code is correct. Access granted.\n");
+            return 0;
+        }
+        else
+        {
+            attempts++;
+            if (attempts < max_att)
+                printf("Wrong PIN. Try again.\n");
+        }
     }
+
+    printf("You have exceeded the maximum number of attempts. Access denied.\n");
+
+    return 0;
+}
